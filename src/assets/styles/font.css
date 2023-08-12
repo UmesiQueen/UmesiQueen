@@ -1,0 +1,58 @@
+/* Rubik_Mono_One */
+@font-face {
+  font-family: "Rubik_Mono_One";
+  src: url("../../../fonts/rubik-mono-one/RubikMonoOne-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Rubik */
+@font-face {
+  font-family: "Rubik";
+  src: url("../../../fonts/rubik/Rubik-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../../../fonts/rubik/Rubik-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../../../fonts/rubik/Rubik-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Work_Sans */
+@font-face {
+  font-family: "Work_Sans";
+  src: url("../../../fonts/work-sans/WorkSans-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Work_Sans";
+  src: url("../../../fonts/work-sans/WorkSans-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Work_Sans";
+  src: url("../../../fonts/work-sans/WorkSans-SemiBold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Work_Sans";
+  src: url("../../../fonts/work-sans/WorkSans-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}

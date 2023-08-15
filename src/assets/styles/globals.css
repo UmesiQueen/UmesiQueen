@@ -19,6 +19,9 @@ a {
 body {
   padding: 0;
   margin: 0;
+  background-color: #121212;
+  font-family: "Work_Sans", sans-serif;
+  font-weight: 400;
 }
 
 input:-webkit-autofill,
@@ -27,4 +30,139 @@ input:-webkit-autofill:focus {
 }
 input[data-autocompleted] {
   background-color: transparent !important;
+}
+
+b {
+  color: #fffffff3;
+}
+
+h2 {
+  font-family: "Rubik_Mono_One", sans-serif;
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+h3,
+label {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+/* ABOUT SECTION */
+
+.experience ul li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.experience ul li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: calc(0px - 40px);
+  border-radius: 50%;
+  border: 1.5px #ccc solid;
+}
+
+.experience ul li::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 80%;
+  top: calc(12px + 13px);
+  left: calc(0px - 40px + 12px / 2 - 1px / 2);
+  border-left: 1px #ccc solid;
+}
+
+.experience ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.experience ul li:last-child::after {
+  border-left: 0px;
+}
+
+.experience ul li span {
+  font-weight: 700;
+  color: #fff;
+}
+
+.experience ul li h4 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.skills li {
+  background-color: rgb(210, 219, 219);
+  color: black;
+  border-radius: 5px;
+  margin: 5px 7px 5px 0;
+  padding: 2px 7px;
+  font-weight: 700;
+}
+/* END */
+
+/* PORTFOLIO SECTION */
+
+.works a:first-child:hover .preview {
+  visibility: visible;
+}
+
+/* END */
+
+/* CONTACT SECTION */
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.required::after {
+  content: "*";
+  color: #fc6666;
+  position: absolute;
+  padding-left: 55px;
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 3px #a88fac solid;
+  border-radius: 10px;
+  padding: 5px 20px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  height: auto;
+  line-height: 1;
+}
+
+/* END*/
+
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 19px;
+  }
 }

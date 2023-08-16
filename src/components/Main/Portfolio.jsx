@@ -1,7 +1,9 @@
-import React from "react";
+import { useContext } from "react";
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
+
+import { AppContext } from "../../App";
 
 const projects = [
   {
@@ -85,8 +87,10 @@ const ProjectCard = ({
 };
 
 const Portfolio = () => {
+  const { refs } = useContext(AppContext);
+
   return (
-    <section className="mt-10 px-8 md:px-0">
+    <section ref={refs.portfolio} className="mb-5 px-8 md:px-0">
       <h2>Portfolio</h2>
       <div className="md:px-8 ">
         <p className="mt-3">

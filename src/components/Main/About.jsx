@@ -1,7 +1,8 @@
-import React from "react";
+import { useContext } from "react";
 import { motion } from "framer-motion";
 
 import Button from "../UI/Button/Button";
+import { AppContext } from "../../App";
 
 const skills = [
   "HTML5/CSS3",
@@ -20,8 +21,10 @@ const skills = [
 ];
 
 const About = () => {
+  const { refs } = useContext(AppContext);
+
   return (
-    <section className="px-8 md:px-0">
+    <section ref={refs.about} className=" mb-5 px-8 md:px-0">
       <h2>About</h2>
       <div className="md:px-8">
         <div className="mt-5 md:mt-0 lg:flex">

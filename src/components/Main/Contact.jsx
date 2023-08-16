@@ -1,8 +1,11 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
+import { AppContext } from "../../App";
+
 const Contact = () => {
+  const { refs } = useContext(AppContext);
   const textArea = useRef();
 
   const autoExpand = () => {
@@ -10,7 +13,7 @@ const Contact = () => {
     if (scrollHeight >= 45) textArea.current.style.height = `${scrollHeight}px`;
   };
   return (
-    <section className="mt-10 px-8 md:px-0">
+    <section ref={refs.contact} className="mb-5 px-8 md:px-0">
       <h2>Contact</h2>
       <div className="mt-5 md:px-8 lg:flex justify-evenly lg:space-x-3 ">
         <form>

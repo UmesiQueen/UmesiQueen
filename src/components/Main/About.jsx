@@ -86,7 +86,7 @@ const About = () => {
           <h3>My Skills</h3>
 
           <ul className=" skills flex flex-wrap lg:px-8 ">
-            {skills.map((skill) => (
+            {skills.map((skill, index) => (
               <motion.li
                 whileHover={{
                   scale: 1.3,
@@ -97,6 +97,7 @@ const About = () => {
                   boxShadow: "inset 0px 0px 1px 2px rgba(0,0,0,0.6)",
                 }}
                 transition={{ type: "spring", damping: 10 }}
+                key={index}
               >
                 {skill}
               </motion.li>

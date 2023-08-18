@@ -3,6 +3,8 @@ import classNames from "classnames";
 import { Spiral as Hamburger } from "hamburger-react";
 
 import { AppContext } from "../../App";
+import profile from "../../assets/icon/resume.png";
+import Logo from "../../assets/image/queen-white.svg";
 
 const Navbar = () => {
   const navRef = useRef();
@@ -72,63 +74,75 @@ const Navbar = () => {
       <nav
         ref={navRef}
         className={classNames(
-          " bg-black-200 text-white-400 flex justify-between items-center px-8 py-[12.5px] md:py-[23px] w-full",
-          onScroll ? "fixed md:px-20 lg:px-36 z-[2]" : "absolute md:px-14 "
+          " bg-black-200 text-white-400 flex justify-between items-center px-8 md:px-24 lg:px-36 py-[12.5px] md:py-[23px] w-full",
+          onScroll ? "fixed z-[2]" : "absolute "
         )}
       >
         <img
-          className=" w-[110px] md:w-[150px] h-[50px]"
-          src="/image/queen-white.svg"
+          className="w-[110px] md:w-[150px] h-[50px]"
+          src={Logo}
           alt="logo"
           onClick={() => scrollToSection(home)}
         />
-        <ul
-          className={classNames(
-            "md:flex gap-1 font-Rubik font-medium bg-inherit ",
-            isClicked
-              ? "absolute top-16 right-0 w-full mt-2 text-center "
-              : "hidden"
-          )}
-        >
-          <li
-            className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
-            onClick={() => scrollToSection(home)}
+
+        <div className=" lg:w-3/4 md:flex items-center justify-end lg:gap-x-10 font-Rubik ">
+          <ul
+            className={classNames(
+              "md:flex gap-1 font-medium bg-black-200 ",
+              isClicked
+                ? "absolute top-16 right-0 w-full mt-2 text-center "
+                : "hidden"
+            )}
           >
-            Home
-          </li>
-          <li
-            className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
-            onClick={() => scrollToSection(about)}
+            <li
+              className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
+              onClick={() => scrollToSection(home)}
+            >
+              Home
+            </li>
+            <li
+              className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
+              onClick={() => scrollToSection(about)}
+            >
+              About
+            </li>
+            <li
+              className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
+              onClick={() => scrollToSection(portfolio)}
+            >
+              Portfolio
+            </li>
+            <li
+              className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
+              onClick={() => scrollToSection(contact)}
+            >
+              Contact
+            </li>
+          </ul>
+
+          <a
+            href="/Queen_Umesi_-_Frontend_Developer.pdf"
+            download="Queen_Umesi_-_Frontend_Developer.pdf"
+            className=" absolute top-[13.5px] right-20 md:relative md:top-0 md:right-0 inline-flex items-center justify-center lg:ml-2 font-bold glass py-1 px-1 md:px-0 w-[48px] h-[48px] md:w-44 "
           >
-            About
-          </li>
-          <li
-            className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
-            onClick={() => scrollToSection(portfolio)}
-          >
-            Portfolio
-          </li>
-          <li
-            className="mx-0 md:mx-1.5 py-2 md:py-0 md:hover:bg-inherit hover:bg-[#5e548ea8] md:hover:text-purple-400 md:hover:scale-100 hover:scale-110"
-            onClick={() => scrollToSection(contact)}
-          >
-            Contact
-          </li>
-        </ul>
-        <div className="font-Rubik_Mono_One absolute right-24 md:relative md:right-0">
-          <a href=".">
-            <span className=" hidden md:block">Download CV</span>
+            <img
+              src={profile}
+              alt="resume icon"
+              className=" w-[30px] md:[32px] h-[30px]"
+            />
+            <span className="pl-1 hidden md:block">Download CV</span>
           </a>
         </div>
+
         {/* TOGGLE MENU
-         For more info check, "https://hamburger-react.netlify.app/ "*/}
-        <div className="md:hidden">
+         From https://hamburger-react.netlify.app/ */}
+        <div className="md:hidden glass">
           <Hamburger
             toggled={isClicked}
             toggle={setClick}
             rounded
             duration={0.8}
-            size={25}
+            size={24}
           />
         </div>
       </nav>

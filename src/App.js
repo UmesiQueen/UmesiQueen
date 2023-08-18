@@ -8,6 +8,7 @@ import About from "./components/Main/About";
 import Portfolio from "./components/Main/Portfolio";
 import Contact from "./components/Main/Contact";
 import Footer from "./components/Footer/Footer";
+// import AnimatedCursor from "./components/Cursor/Cursor";
 
 export const AppContext = createContext(null);
 
@@ -19,9 +20,10 @@ const App = () => {
 
   return (
     <AppContext.Provider value={{ refs: { home, about, portfolio, contact } }}>
+      {/* <AnimatedCursor /> */}
       <>
         <Navbar />
-        <main className="text-white-200 md:px-40">
+        <main>
           <Home />
           <About />
           <Portfolio />

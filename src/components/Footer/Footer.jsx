@@ -1,24 +1,19 @@
 import React from "react";
-import Socials from "../UI/Socials/Socials";
+import Socials from "../Socials/Socials";
+import Logo from "../../assets/image/queen-white.svg";
 
 const Footer = () => {
   return (
-    <footer className="md:mt-10 px-8 py-10 md:px-48 text-white-400 md:flex justify-between items-center">
+    <footer className=" p-8 md:px-48 md:py-10 text-white-400 flex flex-col md:flex-row md:justify-between md:items-end">
       <div>
         <img
-          className=" w-[110px] md:w-[150px] h-[110px] md:h-[150px]"
-          src="/image/queen-white.svg"
+          className=" w-[110px] md:w-[150px] h-[50px] my-3 md:my-4 md:-ml-3"
+          src={Logo}
           alt="logo"
         />
-        <a
-          href="mailto:queenumesi01@gmail.com"
-          className=" hover:text-purple-400 underline mb-2"
-        >
-          queenumesi01@gmail.com
-        </a>
         <p>Frontend Developer</p>
       </div>
-      <div className="mt-5">
+      <div className="mt-5 text-right self-end">
         <h3>Mediums</h3>
         <Socials />
       </div>

@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { Spiral as Hamburger } from "hamburger-react";
 
 import { AppContext } from "../../App";
-import profile from "../../assets/icon/resume.png";
 import Logo from "../../assets/image/queen-white.svg";
 
 const Navbar = () => {
@@ -119,19 +118,6 @@ const Navbar = () => {
               Contact
             </li>
           </ul>
-
-          <a
-            href="/Queen_Umesi_-_Frontend_Developer.pdf"
-            download="Queen_Umesi_-_Frontend_Developer.pdf"
-            className=" absolute top-[13.5px] right-20 md:relative md:top-0 md:right-0 inline-flex items-center justify-center lg:ml-2 font-bold glass py-1 px-1 md:px-0 w-[48px] h-[48px] md:w-44 "
-          >
-            <img
-              src={profile}
-              alt="resume icon"
-              className=" w-[30px] md:[32px] h-[30px]"
-            />
-            <span className="pl-1 hidden md:block">Download CV</span>
-          </a>
         </div>
 
         {/* TOGGLE MENU

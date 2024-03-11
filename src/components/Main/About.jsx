@@ -28,8 +28,6 @@ const About = () => {
 
   return (
     <section ref={refs.about} className=" mb-5 px-8 md:px-40 lg:px-48">
-      <h2>About</h2>
-
       <div className="mt-5 md:mt-0 lg:flex">
         <div className="lg:w-1/2">
           <p>
@@ -45,7 +43,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="py-6 lg:py-0 lg:w-1/2 flex flex-wrap lg:items-start lg:justify-evenly gap-4">
+        <div className="mt-4 lg:mt-0 py-6 lg:py-0 lg:w-1/2 flex flex-wrap justify-between content-center lg:items-start md:justify-evenly gap-4">
           <a
             href="/Queen_Umesi_-_Frontend_Developer.pdf"
             download="Queen_Umesi_-_Frontend_Developer.pdf"
@@ -58,8 +56,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mt-5">
-        <h3>Skills</h3>
+      <div className="mt-8">
         <ul className=" skills flex justify-center gap-x-1 gap-y-2 md:gap-2 flex-wrap pb-3 ">
           {skills.map((skill, index) => (
             <motion.li

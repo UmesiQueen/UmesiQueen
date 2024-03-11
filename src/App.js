@@ -1,7 +1,7 @@
 import { createContext, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./assets/styles/globals.css";
-
 import Navbar from "./components/Header/Navbar";
 import Home from "./components/Main/Home";
 import About from "./components/Main/About";
@@ -21,16 +21,15 @@ const App = () => {
   return (
     <AppContext.Provider value={{ refs: { home, about, portfolio, contact } }}>
       {/* <AnimatedCursor /> */}
-      <>
-        <Navbar />
-        <main>
-          <Home />
-          <About />
-          <Portfolio />
-          <Contact />
-        </main>
-        <Footer />
-      </>
+      <Navbar />
+      <main>
+        <Home />
+        <About />
+        <Portfolio />
+        <Contact />
+      </main>
+      <Footer />
+      <Analytics />
     </AppContext.Provider>
   );
 };
